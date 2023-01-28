@@ -6,6 +6,14 @@ class UserAPIView(generics.ListAPIView):
     queryset = User.objects.all()
     serializer_class = Userserializers
 
-class UserAPIDetail(generics.RetrieveAPIView):
+class UserAPIDetail(generics.RetrieveUpdateAPIView):
+    queryset = User.objects.all()
+    serializer_class = Userserializers
+
+class UserCreateAPIView(generics.CreateAPIView):
+    queryset = User.objects.all()
+    serializer_class = Userserializers
+
+class UserDestroyAPIView(generics.DestroyAPIView):
     queryset = User.objects.all()
     serializer_class = Userserializers
